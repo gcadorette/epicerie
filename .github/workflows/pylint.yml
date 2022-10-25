@@ -27,4 +27,4 @@ jobs:
         pip install flask
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint --rcFile=./backend/.pylintrc $(git ls-files '*.py')
