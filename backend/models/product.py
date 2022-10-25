@@ -1,4 +1,4 @@
-from backend.models.model import Model
+from model import Model
 
 class Product(Model):
     id = None

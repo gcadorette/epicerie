@@ -1,4 +1,4 @@
-from backend.helper.generator import Generator
+from helper.generator import Generator
 
 class Model:
     def __init__(self):

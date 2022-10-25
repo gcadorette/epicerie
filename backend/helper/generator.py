@@ -1,7 +1,4 @@
-from asyncio import constants
-
-
-from backend.constants import Constants
+from constants import Constants
 import hashlib
 
 class Generator:

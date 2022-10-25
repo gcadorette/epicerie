@@ -1,4 +1,4 @@
-from backend.models.model import Model
+from model import Model
 
 class Price(Model):
     def __init__(self, _amount, _date, _isSpecial, _product, _location):

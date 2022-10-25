@@ -1,4 +1,4 @@
-from backend.models.model import Model
+from model import Model
 
 class Location(Model):
     def __init__(self, _country, _state, _city, _civicNumber, _street, _suite, _chain):
