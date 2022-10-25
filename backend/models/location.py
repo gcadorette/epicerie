@@ -5,8 +5,9 @@ class Location(Model):
         self.country = _country
         self.state = _state
         self.city = _city
-        self.civicNumber = _civicNumber
+        self.civic_number = _civicNumber
         self.street = _street
         self.suite = _suite
         self.chain = _chain
         super().__init__()
+        

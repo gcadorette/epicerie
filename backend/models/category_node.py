@@ -5,3 +5,4 @@ class CategoryNode(Model):
         self.child = _child
         self.parent = _parent
         super().__init__()
+        

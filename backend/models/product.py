@@ -7,3 +7,4 @@ class Product(Model):
         self.qte = _qte
         self.brand = _brand
         super().__init__()
+        
