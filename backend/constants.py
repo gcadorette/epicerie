@@ -1,2 +1,3 @@
 class Constants:
     SALT = 'pleindeselpourvrai'
+    
