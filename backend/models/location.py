@@ -1,13 +1,23 @@
-from model import Model
+from dataclasses import dataclass
+from models.model import Model
 
+@dataclass
 class Location(Model):
-    def __init__(self, _country, _state, _city, _civicNumber, _street, _suite, _chain):
-        self.country = _country
-        self.state = _state
-        self.city = _city
-        self.civic_number = _civicNumber
-        self.street = _street
-        self.suite = _suite
-        self.chain = _chain
+    country: str
+    state: str
+    city: str
+    civic_number: str
+    street: str
+    suite: str
+    chain_id: str
+
+    def __init__(self, country: str, state: str, city: str, civic_number: str, street: str, suite: str, chain_id: str):
+        self.country = country
+        self.state = state
+        self.city = city
+        self.civic_number = civic_number
+        self.street = street
+        self.suite = suite
+        self.chain_id = chain_id
         super().__init__()
         

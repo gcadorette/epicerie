@@ -1,7 +1,10 @@
-from model import Model
+from dataclasses import dataclass
+from models.model import Model
 
+@dataclass
 class Chain(Model):
-    def __init__(self, _name):
-        self.name = _name
+    name: str
+    def __init__(self, name: str):
+        self.name = name
         super().__init__()
         

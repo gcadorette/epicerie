@@ -62,7 +62,7 @@ ignored-modules=
 
 # Python code to execute, usually for sys.path manipulation such as
 # pygtk.require().
-#init-hook="from pylint.config import find_pylintrc; import os, sys; print(os.path.dirname(find_pylintrc()))"
+init-hook="import sys; sys.path.append(".")"
 
 # Use multiple processes to speed up Pylint. Specifying 0 will auto-detect the
 # number of processors available to use, and will cap the count on Windows to
@@ -180,7 +180,8 @@ good-names=i,
            ex,
            Run,
            _,
-           id
+           id,
+           f
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
@@ -327,7 +328,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=200
 
 # Maximum number of lines in a module.
 max-module-lines=1000
@@ -419,7 +420,8 @@ disable=raw-checker-failed,
         C0114,
         C0115,
         C0116,
-        E0015
+        E0015,
+        consider-using-enumerate
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option

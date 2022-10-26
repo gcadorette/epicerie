@@ -1,10 +1,19 @@
-from model import Model
+from dataclasses import dataclass
+import datetime
+from models.model import Model
 
+@dataclass
 class Price(Model):
-    def __init__(self, _amount, _date, _is_special, _product, _location):
-        self.amount = _amount
-        self.date = _date
-        self.is_special = _is_special
-        self.product = _product
-        self.location = _location
+    amount: int
+    date: datetime
+    is_special: bool
+    product_id: str
+    location_id: str
+
+    def __init__(self, amount: int, date: datetime, is_special: str, product_id: str, location_id: str):
+        self.amount = amount
+        self.date = date
+        self.is_special = is_special
+        self.product = product_id
+        self.location_id = location_id
         super().__init__()

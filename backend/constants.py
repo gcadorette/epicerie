@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+
+@dataclass
 class Constants:
-    SALT = 'pleindeselpourvrai'
-    
+    salt: str = 'pleindeselpourvrai'
+    test_data_folder = 'test_data'

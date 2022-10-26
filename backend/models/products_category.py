@@ -1,7 +1,12 @@
-from model import Model
+from dataclasses import dataclass
+from models.model import Model
 
+@dataclass
 class ProductsCategory(Model):
-    def __init__(self, _category, _product):
-        self.category = _category
-        self.product = _product
+    category_id: str
+    product_id: str
+
+    def __init__(self, category_id: str, product_id: str):
+        self.category_id = category_id
+        self.product = product_id
         super().__init__()
