@@ -6,7 +6,7 @@ class ProductsCategory(Model):
     category_id: str
     product_id: str
 
-    def __init__(self, category_id: str, product_id: str):
+    def __init__(self, category_id: str, product_id: str, guid: str = None):
         self.category_id = category_id
         self.product = product_id
-        super().__init__()
+        super().__init__(guid)

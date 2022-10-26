@@ -2,6 +2,7 @@ from enum import Enum
 
 from client.iclient import IClient
 from constants import Constants
+from models.brand import Brand
 from models.model import Model
 from models.product import Product
 
@@ -19,8 +20,14 @@ class FileClient(IClient):
     def add_product(self, product: Product) -> None:
         self._add_to_file(File.PRODUCT, product)
 
+    def add_brand(self, brand: Brand) -> None:
+        self._add_to_file(File.BRAND, brand)
+
     def products(self) -> list:
         return self._get_models_from_file(File.PRODUCT, Product.__name__)
+
+    def brands(self) -> list:
+        return self._get_models_from_file(File.BRAND, Brand.__name__)
 
     def _add_to_file(self, file_name: Enum, obj_to_add: Model) -> None:
         with open(f"{Constants.test_data_folder}/{file_name.value}", "a", encoding="utf-8") as f:

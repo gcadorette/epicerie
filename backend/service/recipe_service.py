@@ -1,7 +1,8 @@
 from client.iclient import IClient
+from models.brand import Brand
 from models.product import Product
 
-class ProductService:
+class RecipeService:
     _client: IClient = None
 
     def __init__(self, client: IClient):
@@ -12,3 +13,9 @@ class ProductService:
 
     def get_all_products(self) -> list:
         return self._client.products()
+
+    def add_brand(self, brand: Brand) -> None:
+        self._client.add_brand(brand)
+
+    def get_all_brands(self) -> list:
+        return self._client.brands
