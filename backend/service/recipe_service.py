@@ -18,4 +18,4 @@ class RecipeService:
         self._client.add_brand(brand)
 
     def get_all_brands(self) -> list:
-        return self._client.brands
+        return self._client.brands()
